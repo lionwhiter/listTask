@@ -1,0 +1,12 @@
+.contentGeneri{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+} 
+.headerCard {
+  display: flex;
+  justify-content: space-between;
+  padding: .3rem 1rem;
+}
