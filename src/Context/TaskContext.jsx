@@ -5,10 +5,12 @@ import { listTask } from "../Data/dataList.js";
 export const TaskContext = createContext();
 export function TaskContextProvider({ children }) {
     const [task, setTask] = useState([]);
+    
     useEffect(() => {
         setTask(listTask);
     }, []);
 
+    //actualizacion de estado de Tareas
     function updateTask(idTask) {
         setTask(
             task.map((valueTask) => {
@@ -22,14 +24,27 @@ export function TaskContextProvider({ children }) {
         );
     }
 
+    // Eliminar Tarea 
     function delenteTask(idTask) {
         setTask(task.filter((valueTask) => valueTask.id !== idTask));
     }
 
+    // Creacion de Nueva Tarea
     function createTask(dta) {
-        console.log(dta);
-        setTask([...task, dta]);
+      console.log(dta);  
+      setTask([
+        ...task, 
+        {
+          id: dta.id,
+          title: dta.title,
+          desc: dta.desc,
+          status: dta.statu,
+          user: dta.user
+      }
+      ]);
+      console.log(task);
     }
+
     return (
         <TaskContext.Provider
             value={{

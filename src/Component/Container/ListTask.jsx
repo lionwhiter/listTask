@@ -17,7 +17,7 @@ const ListTask = () => {
             id="controlled-tab-example"
             activeKey={listState}
             onSelect={(K) => setListState(K)}
-            className="mb-3 text-dark"
+            className="mt-4 mb-3 text-dark "
         >
             <Tab eventKey="Pendiente" title="Pendiente">
                 <Row xs={1} md={2}>

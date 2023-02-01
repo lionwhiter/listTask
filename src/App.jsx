@@ -14,7 +14,7 @@ const App = () => {
     return (
         <main>
             <Container fluid className="p-3 text-white">
-                <Container className="p-5 mb-4 bg-dark rounded-3 ">
+                <Container className="p-3 mb-5 bg-dark rounded-3 ">
                     <Row xs = {1}>
                         <Col  className="contentGeneri">
                             <h1 className="header text-center">

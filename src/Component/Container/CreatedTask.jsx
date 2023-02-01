@@ -25,7 +25,7 @@ const CreatedTask = (props) => {
                 id: task.length + 1,
                 title: title.value,
                 desc: desc.value,
-                statu: false,
+                statu: "Pendiente",
                 user: "Default User",
             });
             alertShow("Tarea agregada");
